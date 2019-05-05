@@ -9,7 +9,7 @@ import java.util.concurrent.Future;
 
 @Slf4j
 public class FutureExample {
-
+    // callable范型指定 是call()方法返回值的类型
     static class MyCallable implements Callable<String> {
 
         @Override

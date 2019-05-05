@@ -51,8 +51,8 @@ public class ForkJoinTaskExample extends RecursiveTask<Integer> {
     public static void main(String[] args) {
         ForkJoinPool forkjoinPool = new ForkJoinPool();
 
-        //生成一个计算任务，计算1+2+3+4
-        ForkJoinTaskExample task = new ForkJoinTaskExample(1, 100);
+        //生成一个计算任务，计算1到100的累加和
+        ForkJoinTaskExample task = new ForkJoinTaskExample(1, 10000);
 
         //执行一个任务
         Future<Integer> result = forkjoinPool.submit(task);

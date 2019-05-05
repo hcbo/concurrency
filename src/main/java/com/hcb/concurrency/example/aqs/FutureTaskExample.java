@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
+/**
+ * 将callable 和 future 做的事情结合到一起,推荐使用
+ */
 @Slf4j
 public class FutureTaskExample {
 
@@ -17,7 +20,6 @@ public class FutureTaskExample {
                 return "Done";
             }
         });
-
         new Thread(futureTask).start();
         log.info("do something in main");
         Thread.sleep(1000);
